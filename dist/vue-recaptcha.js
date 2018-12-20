@@ -114,7 +114,11 @@
 
   if (typeof window !== 'undefined') {
     console.log('vueRecaptchaApiLoaded got defined to recaptcha.notify');
-    window.vueRecaptchaApiLoaded = recaptcha.notify;
+
+    window.vueRecaptchaApiLoaded = function () {
+      console.log('window.vueRecaptchaApiLoaded executed!');
+      return recaptcha.notify;
+    };
   }
 
   var VueRecaptcha = {
