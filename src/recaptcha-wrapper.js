@@ -56,6 +56,7 @@ export function createRecaptcha () {
 const recaptcha = createRecaptcha()
 
 if (typeof window !== 'undefined') {
+  console.log('vueRecaptchaApiLoaded got defined to recaptcha.notify');
   window.vueRecaptchaApiLoaded = recaptcha.notify
 }
 
