@@ -8,11 +8,14 @@ const defer = () => {
 
     state = true
     for (let i = 0, len = callbacks.length; i < len; i++) {
+      console.log('for... ran ', callbacks[i])
       callbacks[i](val)
     }
   }
 
   const then = cb => {
+    console.log('then got called... how?')
+    console.log(cb)
     if (!state) {
       callbacks.push(cb)
       return

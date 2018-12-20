@@ -29,11 +29,15 @@ var defer = function defer() {
     state = true;
 
     for (var i = 0, len = callbacks.length; i < len; i++) {
+      console.log('for... ran ', callbacks[i]);
       callbacks[i](val);
     }
   };
 
   var then = function then(cb) {
+    console.log('then got called... how?');
+    console.log(cb);
+
     if (!state) {
       callbacks.push(cb);
       return;
