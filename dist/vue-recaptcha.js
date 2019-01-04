@@ -138,23 +138,16 @@
     mounted: function mounted() {
       var _this = this;
 
-      recaptcha.checkRecaptchaLoad();
+      this.renderCaptcha();
+      window.renderAgain = this.renderAgain.bind(this);
+      setTimeout(function () {
+        console.log('10s run!');
 
-      var opts = _extends({}, this.$props, {
-        callback: this.emitVerify,
-        'expired-callback': this.emitExpired
-      });
-
-      var container = this.$slots.default ? this.$el.children[0] : this.$el;
-      recaptcha.render(container, opts, function (id) {
-        _this.$widgetId = id;
-
-        _this.$emit('render', id);
-      });
-      window.renderAgain = this.renderAgain;
+        _this.renderAgain();
+      }, 10000);
     },
     methods: {
-      renderAgain: function renderAgain() {
+      renderCaptcha: function renderCaptcha() {
         var _this2 = this;
 
         recaptcha.checkRecaptchaLoad();
