@@ -138,6 +138,7 @@
     mounted: function mounted() {
       var _this = this;
 
+      console.warn('--- MOUNTED RUN');
       this.renderCaptcha();
       setTimeout(function () {
         console.log('10s run!');
@@ -151,6 +152,7 @@
       renderCaptcha: function renderCaptcha() {
         var _this2 = this;
 
+        console.warn('--- renderCaptcha RUN');
         recaptcha.checkRecaptchaLoad();
 
         var opts = _extends({}, this.$props, {
@@ -181,6 +183,8 @@
       }
     },
     render: function render(h) {
+      console.warn('slot default is ');
+      console.warn(this.$slots.default);
       return h('div', {}, this.$slots.default);
     }
   };

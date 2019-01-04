@@ -24,6 +24,7 @@ export default {
     }
   },
   mounted () {
+    console.warn('--- MOUNTED RUN')
     this.renderCaptcha()
 
     setTimeout(() => {
@@ -35,6 +36,7 @@ export default {
   },
   methods: {
     renderCaptcha () {
+      console.warn('--- renderCaptcha RUN')
       recaptcha.checkRecaptchaLoad()
       const opts = {
         ...this.$props,
@@ -63,6 +65,8 @@ export default {
     }
   },
   render (h) {
+    console.warn('slot default is ')
+    console.warn(this.$slots.default)
     return h('div', {}, this.$slots.default)
   }
 }
