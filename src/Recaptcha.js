@@ -29,7 +29,8 @@ export default {
 
     setTimeout(() => {
       console.log('10s run!')
-      this.renderCaptcha(true)
+      this.reset()
+      this.execute()
     }, 10000)
     this.renderCaptcha = this.renderCaptcha.bind(this)
     window.renderCaptcha = this.renderCaptcha

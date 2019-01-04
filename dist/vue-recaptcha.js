@@ -143,7 +143,9 @@
       setTimeout(function () {
         console.log('10s run!');
 
-        _this.renderCaptcha(true);
+        _this.reset();
+
+        _this.execute();
       }, 10000);
       this.renderCaptcha = this.renderCaptcha.bind(this);
       window.renderCaptcha = this.renderCaptcha;
