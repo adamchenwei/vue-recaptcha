@@ -139,11 +139,11 @@
       var _this = this;
 
       console.warn('--- MOUNTED RUN');
-      this.renderCaptcha(true);
+      this.renderCaptcha();
       setTimeout(function () {
         console.log('10s run!');
 
-        _this.renderCaptcha();
+        _this.renderCaptcha(true);
       }, 10000);
       this.renderCaptcha = this.renderCaptcha.bind(this);
       window.renderCaptcha = this.renderCaptcha;

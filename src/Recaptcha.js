@@ -25,11 +25,11 @@ export default {
   },
   mounted () {
     console.warn('--- MOUNTED RUN')
-    this.renderCaptcha(true)
+    this.renderCaptcha()
 
     setTimeout(() => {
       console.log('10s run!')
-      this.renderCaptcha()
+      this.renderCaptcha(true)
     }, 10000)
     this.renderCaptcha = this.renderCaptcha.bind(this)
     window.renderCaptcha = this.renderCaptcha
