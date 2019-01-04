@@ -17,21 +17,22 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
 
 <!-- TOC -->
 
-- [Description](#description)
-- [Install](#install)
-  - [NPM](#npm)
-  - [CDN](#cdn)
-- [Usage](#usage)
-  - [Get started](#get-started)
-  - [Bind Challenge to Button](#bind-challenge-to-button)
-- [API](#api)
-  - [Props](#props)
-  - [Methods](#methods)
-  - [Events](#events)
-- [FAQ](#faq)
-  - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded)
-  - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
-  - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
+- [vue-recaptcha](#vue-recaptcha)
+  - [Description](#description)
+  - [Install](#install)
+    - [NPM](#npm)
+    - [CDN](#cdn)
+  - [Usage](#usage)
+    - [Get started](#get-started)
+    - [Bind Challenge to Button](#bind-challenge-to-button)
+  - [API](#api)
+    - [Props](#props)
+    - [Methods](#methods)
+    - [Events](#events)
+  - [FAQ](#faq)
+    - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-%22recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded%22)
+    - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
+    - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
 
 <!-- /TOC -->
 
@@ -157,3 +158,4 @@ Please refernece to [recaptcha's faq](https://developers.google.com/recaptcha/do
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
 [invisible-recaptcha-params]: https://developers.google.com/recaptcha/docs/invisible#render_param
+
