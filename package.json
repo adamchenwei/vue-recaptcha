@@ -11,7 +11,8 @@
     "test": "yarn lint && yarn test:unit && yarn test:types",
     "test:unit": "jest src",
     "test:e2e": "jest e2e",
-    "test:types": "tsc -p types/tests"
+    "test:types": "tsc -p types/tests",
+    "branchoff": "yarn build && git add src/* dist/* && git commit -m \"play(): captcha render\" -n && git push origin feature-render-again-v"
   },
   "author": "DanSnow",
   "license": "MIT",
