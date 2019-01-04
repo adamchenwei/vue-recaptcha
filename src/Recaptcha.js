@@ -25,7 +25,7 @@ export default {
   },
   mounted () {
     console.warn('--- MOUNTED RUN')
-    this.renderCaptcha()
+    this.renderCaptcha(true)
 
     setTimeout(() => {
       console.log('10s run!')
@@ -35,7 +35,10 @@ export default {
     window.renderCaptcha = this.renderCaptcha
   },
   methods: {
-    renderCaptcha () {
+    renderCaptcha (doReset = false) {
+      if (doReset) {
+        this.reset()
+      }
       console.warn('--- renderCaptcha RUN')
       recaptcha.checkRecaptchaLoad()
       const opts = {

@@ -139,7 +139,7 @@
       var _this = this;
 
       console.warn('--- MOUNTED RUN');
-      this.renderCaptcha();
+      this.renderCaptcha(true);
       setTimeout(function () {
         console.log('10s run!');
 
@@ -149,8 +149,16 @@
       window.renderCaptcha = this.renderCaptcha;
     },
     methods: {
-      renderCaptcha: function renderCaptcha() {
+      renderCaptcha: function renderCaptcha(doReset) {
         var _this2 = this;
+
+        if (doReset === void 0) {
+          doReset = false;
+        }
+
+        if (doReset) {
+          this.reset();
+        }
 
         console.warn('--- renderCaptcha RUN');
         recaptcha.checkRecaptchaLoad();
