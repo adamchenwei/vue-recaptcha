@@ -12,7 +12,8 @@
     "test:unit": "jest src",
     "test:e2e": "jest e2e",
     "test:types": "tsc -p types/tests",
-    "branchoff": "yarn build && git add src/* dist/* && git commit -m \"play(): captcha render\" -n && git push origin feature-render-again-v"
+    "push": "git checkout -b feature-render-again-v-0.0.4 && git push origin feature-render-again-v-0.0.4",
+    "release": "yarn build && git add package.json src/* dist/* && git commit -m \"play(): captcha render\" && yarn run push"
   },
   "author": "DanSnow",
   "license": "MIT",

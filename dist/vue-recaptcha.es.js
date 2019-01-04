@@ -136,8 +136,10 @@ var VueRecaptcha = {
     setTimeout(function () {
       console.log('10s run!');
 
-      _this.renderAgain();
+      _this.renderCaptcha();
     }, 10000);
+    this.renderCaptcha = this.renderCaptcha.bind(this);
+    window.renderCaptcha = this.renderCaptcha;
   },
   methods: {
     renderCaptcha: function renderCaptcha() {
