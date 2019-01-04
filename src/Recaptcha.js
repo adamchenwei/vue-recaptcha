@@ -35,8 +35,22 @@ export default {
       this.$widgetId = id
       this.$emit('render', id)
     })
+    window.renderAgain = this.renderAgain
   },
   methods: {
+    renderAgain () {
+      recaptcha.checkRecaptchaLoad()
+      const opts = {
+        ...this.$props,
+        callback: this.emitVerify,
+        'expired-callback': this.emitExpired
+      }
+      const container = this.$slots.default ? this.$el.children[0] : this.$el
+      recaptcha.render(container, opts, id => {
+        this.$widgetId = id
+        this.$emit('render', id)
+      })
+    },
     reset () {
       recaptcha.reset(this.$widgetId)
     },

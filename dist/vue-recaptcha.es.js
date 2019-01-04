@@ -145,8 +145,26 @@ var VueRecaptcha = {
 
       _this.$emit('render', id);
     });
+    window.renderAgain = this.renderAgain;
   },
   methods: {
+    renderAgain: function renderAgain() {
+      var _this2 = this;
+
+      recaptcha.checkRecaptchaLoad();
+
+      var opts = _extends({}, this.$props, {
+        callback: this.emitVerify,
+        'expired-callback': this.emitExpired
+      });
+
+      var container = this.$slots.default ? this.$el.children[0] : this.$el;
+      recaptcha.render(container, opts, function (id) {
+        _this2.$widgetId = id;
+
+        _this2.$emit('render', id);
+      });
+    },
     reset: function reset() {
       recaptcha.reset(this.$widgetId);
     },
