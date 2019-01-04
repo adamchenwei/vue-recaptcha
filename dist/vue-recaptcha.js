@@ -160,6 +160,8 @@
 
         var container = this.$slots.default ? this.$el.children[0] : this.$el;
         recaptcha.render(container, opts, function (id) {
+          console.warn('------------- widget id');
+          console.warn(id);
           _this2.$widgetId = id;
 
           _this2.$emit('render', id);

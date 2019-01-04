@@ -43,6 +43,8 @@ export default {
       }
       const container = this.$slots.default ? this.$el.children[0] : this.$el
       recaptcha.render(container, opts, id => {
+        console.warn('------------- widget id')
+        console.warn(id)
         this.$widgetId = id
         this.$emit('render', id)
       })
