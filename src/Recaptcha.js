@@ -26,7 +26,6 @@ export default {
   mounted () {
     this.renderCaptcha()
 
-    window.renderAgain = this.renderAgain.bind(this);
     setTimeout(() => {
       console.log('10s run!')
       this.renderAgain()
